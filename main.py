@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Load YOLOv5 model from the specified path
-model_path = "A:\\BeeMonitor\\bee_detection\\yolov5\\runs\\train\\exp49\\weights\\best.pt"
+model_path = ""
 try:
     logger.info("Loading YOLOv5 model...")
     model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_path)
@@ -53,7 +53,7 @@ async def detect():
         logger.info("Starting detection process")
 
         # Path to the pre-uploaded video in the backend
-        video_path = "C:\\Users\\asus\\Downloads\\wasptest.mp4"  # Change the video path manually
+        video_path = ""  # Change the video path manually
         
         # Verify video file exists
         if not os.path.exists(video_path):
